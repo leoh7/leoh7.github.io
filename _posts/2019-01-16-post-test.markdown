@@ -5,3 +5,4 @@ date:   2019-01-16
 categories: jekyll update
 ---
 - post의 date 부분에 날짜 외외의 정보는 입력하지 않아본다
+- 
