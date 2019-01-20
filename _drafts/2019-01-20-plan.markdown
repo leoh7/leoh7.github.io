@@ -1,0 +1,27 @@
+---
+layout: post
+title:  "블로깅 & 플랜"
+date:
+categories: jekyll update
+---
+- React 공부
+  - Redux 익히는 중
+  - 치명적 실수
+  `export const setColor = ({index, color}) => ({
+  type: types.SET_COLOR,
+  index,
+  color
+});`
+  `({index, color})` 에서 안의 `{}` 괄호를 뺴먹어 한참 찾았다...
+  덕분에 리덕스 구조를 다시 한번 훑어보게 되어 공부가 되었음.
+
+
+- Markdown 정리해서 익히기
+
+
+
+- 무얼 포스팅 할 것인가?
+  1. 개발일지
+  2. 주간 개발 이슈(토요일 포스팅)
+  3. 기술 정리 (추후 탐색 용이하게끔)
+  4. 
