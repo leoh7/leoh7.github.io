@@ -1,0 +1,53 @@
+---
+layout: post
+title:  "윈도우 서브시스템 리눅스(WSL)에 bitnami redmine 설치하기"
+date:   2019-02-28
+categories: jekyll update
+---
+
+- 리눅스 버전 bitnami redmine 다운로드
+bitnami-redmine-4.0.2-0-linux-x64-installer
+근데 run 확장자는 좀 낯설다..?
+
+- 윈도우 내의 파일, 리눅스로 옮기기
+$ cd /mnt/c/Users/사용자/Downloads
+$ sudo cp bitnami-redmine-4.0.2-0-linux-x64-installer /usr/bitnami-redmine.run
+
+- run 확장자 어떻게 쓰는 것이냐?
+간단하게 쉘스크립트 쓰듯이 실행시킨다!
+$ cd /usr/
+$ ./bitnami-redmine.run
+or
+$ sh bitnami-redmine.run
+각종 설정들을 진행해 주면 끝!
+
+- 에러
+설치 끝! 하고 잘 실행이 되면 얼마나 좋으련만 에러가 뜬다.
+에러 정리 : 웹 브라우저 상 최초 설치 화면에는 접속이 됨(localhost:80)
+여기서 access redmine 을 누르면 에러 발생(예전에 윈도우에 설치했을 때도 비슷한 증상을 보인적이 있었다)
+
+
+가능한 원인 집합
+
+1.지킬 등 다른 포트랑 충돌? - 포트 확인
+	= mysql 3306
+	= subversion 3690
+	= apache 80
+2.restart 시에 뜨는 에러? 
+	Protocol not available: AH00076: Failed to enable APR_TCP_DEFER_ACCEPT
+
+3.svn과 redmine의 연동 문제점? https://kagoon.tistory.com/45
+4./etc/profile 에 path 미등록?
+
+- 로그 확인
+로그 내역 없음..
+
+검색 결과 2.restart 시에 뜨던 에러 AH00076 이 중요 이슈였던가 보다.
+WSL 상에서 TCP_DEFER_ACCEPT socket option 이 지원되지 않는 듯?
+/etc/apache2/apache2.conf 를 만들고
+AcceptFilter http none
+AcceptFilter https none
+을 써 저장한 후, redmine을 restart 했다.
+변한 점 없음.
+
+- 이전에 쓰던 백업데이터 불러서 덮기
