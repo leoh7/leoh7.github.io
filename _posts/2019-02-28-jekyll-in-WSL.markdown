@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "윈도우에서 지킬 설치해서 블로깅을 해보자"
+title:  "윈도우에서 WSL에 지킬을 설치해서 블로깅을 해보자"
 date:   2019-02-28
 categories: jekyll update
 ---
