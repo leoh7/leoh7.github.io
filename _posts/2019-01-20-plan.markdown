@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "블로깅 & 플랜"
-date:
-categories: jekyll update
+date:   2019-01-20
+categories: daily notes
 ---
 - React 공부
   - Redux 익히는 중
@@ -24,4 +24,3 @@ categories: jekyll update
   1. 개발일지
   2. 주간 개발 이슈(토요일 포스팅)
   3. 기술 정리 (추후 탐색 용이하게끔)
-  4. 
