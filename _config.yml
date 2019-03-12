@@ -28,6 +28,7 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+
 paginate: 3
 navigation: True
 
@@ -45,3 +46,43 @@ disqus_shortname: 88rafael
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+exclude:
+  - README.md
+  - Rakefile
+  - Gemfile
+  - Gemfile.lock
+  - changelog.md
+  - "*.Rmd"
+  - vendor
+  - .travis.yml
+
+destination: ./output/
+
+### default 레이아웃 정의하기
+# 이런식으로 사용이 가능하다
+# defaults:
+#   -
+#     scope:    # scope/values 쌍을 생성할 때, type 은 선택사항이지만 path 는 반드시 정의해야 합니다.
+#       path: ""
+#       type: "pages"
+#     values:
+#       layout: "my-site"
+#   -
+#     scope:
+#       path: "projects"
+#       type: "pages" # 이전 Jekyll 2.2 에서는 `page` 
+#     values:
+#       layout: "project" # 이전 디폴트 레이아웃 설정을 덮어씀
+#       author: "Mr. Hyde"
+# 이 디폴트 값으로 인하여, 모든 페이지는 my-site 레이아웃을 사용하게 됩니다. 
+# projects/ 폴더 안에 있는 모든 HTML 파일들은 project 레이아웃을 사용하게 됩니다. 
+# 또한 이 파일들은 Mr. Hyde 라는 값을 가진 Liquid 변수 page.author 도 갖게 됩니다.
+
+defaults:
+  -
+    scope:
+      path: "" # 이 빈 문자열은 프로젝트의 모든 파일을 의미함
+      type: "posts" # 이전 Jekyll 2.2 에서는 `post`
+    values:
+      layout: "default"
+      comments: true
