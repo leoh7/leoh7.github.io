@@ -61,3 +61,18 @@ cd /mnt/d/workspace
 ln -s "/mnt/d/workspace" /home/<my-wsl-username>/workspace
 
 심볼릭 링크를 사용해서 워크스페이스를 편하게 접근케 함
+
+		jekyll serve
+		# => 개발서버가 실행됩니다. http://localhost:4000/
+		# 자동 재생성: 활성화. 비활성화하려면 `--no-watch` 를 사용하세요.
+
+		jekyll serve --livereload
+		# 변경사항이 발생했을 때 LiveReload 기능이 브라우저를 새로고침합니다.
+
+		jekyll serve --incremental
+		# 재생성 소요시간을 줄이기 위해 증분 재생성 기능으로 부분 빌드를 합니다.
+
+		jekyll serve --detach
+		# => `jekyll serve` 와 동일하지만 현재 터미널에 독립적으로 실행됩니다.
+		#    서버를 종료하려면, `kill -9 1234` 를 실행하세요. "1234" 는 PID 입니다.
+		#    PID 를 모르겠다면, `ps aux | grep jekyll` 를 실행하고 해당 인스턴스를 종료하세요.
