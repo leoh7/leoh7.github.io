@@ -34,7 +34,10 @@ navigation: True
 
 # Disqus
 disqus: True
+disqus_url: https://disqus.com/by/88_rafael/
+disqus_id: 88rafael
 disqus_shortname: 88rafael
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
