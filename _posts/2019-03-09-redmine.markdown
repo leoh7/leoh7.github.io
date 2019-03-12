@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "윈도우 서브시스템 리눅스(WSL)에 bitnami redmine 설치하기"
-date:   2019-02-28
-categories: jekyll update
+date:   2019-03-09
+categories: develop
 ---
 
 - 리눅스 버전 bitnami redmine 다운로드

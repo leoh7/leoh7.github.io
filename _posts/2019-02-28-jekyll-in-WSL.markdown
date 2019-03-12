@@ -2,7 +2,7 @@
 layout: post
 title:  "윈도우에서 WSL에 지킬을 설치해서 블로깅을 해보자"
 date:   2019-02-28
-categories: jekyll update
+categories: develop
 ---
 - 먼저 Jekyll 은 ruby 스크립트로 만들어져 있다.
 - https://jekyllrb-ko.github.io/docs/windows/ 에 따르면
