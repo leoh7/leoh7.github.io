@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "2019-03-12 일지"
+title:  "03 12 일지"
 date:   2019-03-12
 categories: notes
 ---
