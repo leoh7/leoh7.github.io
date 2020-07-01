@@ -1,7 +1,1 @@
-_site
-.sass-cache
-.jekyll-metadata
-vendor
-
-# 추후 CI 대비용 폴더 output 추가
-output
+.idea
